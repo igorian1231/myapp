@@ -10,8 +10,8 @@ gulp.task('inject', function () {
     var Libs = gulp.src([
         libsDir + 'angular/angular.js',
         libsDir + 'angular-ui-router/release/angular-ui-router.js',
-        libsDir + 'bootstrap/dist/js/bootstrap.js',
         libsDir + 'jquery/dist/jquery.min.js',
+        libsDir + 'bootstrap/dist/js/bootstrap.js',
         './js/**/*.js',
         './css/**/*.css',
         libsDir + 'bootstrap/dist/css/bootstrap.css'
