@@ -11,8 +11,6 @@
     function ContactCtrl ($state) {
         var self = this;
 
-        //$state.go('home.main');
-
         self.header = 'Contact Page';
 
     }

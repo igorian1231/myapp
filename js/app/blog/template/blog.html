@@ -1,0 +1,12 @@
+<h1>{{blog.header}}</h1>
+<button type="button" class="btn btn-default" ng-click="blog.addBtn()">Add post</button>
+
+<div ui-view></div>
+
+<div class="blogContent">
+    <div ng-repeat="post in blog.posts">
+        <h2>{{post.name}}</h2>
+        <p>{{post.description}}</p>
+    </div>
+
+</div>

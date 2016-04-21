@@ -26,4 +26,17 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'ContactCtrl',
             controllerAs: 'contact'
         })
+        .state('main.blog', {
+            url: '/blog',
+            templateUrl: 'js/app/blog/template/blog.html',
+            controller: 'BlogCtrl',
+            controllerAs: 'blog'
+        })
+
+        .state('main.blog.add', {
+            url: '/add',
+            templateUrl: 'js/app/blog/template/form-blog.html',
+            controller: 'FormCtrl',
+            controllerAs: 'form'
+        })
 });

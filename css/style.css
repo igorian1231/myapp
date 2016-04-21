@@ -4,3 +4,13 @@ body {
     overflow: hidden;
     background: url("images/ignasi_pattern_s.png");
 }
+
+.info p {
+    padding-top: 10px;
+    display: inline-block;
+    width:30%;
+}
+
+.form-group .form-control {
+    width: 50%;
+}

@@ -10,6 +10,10 @@
 
         self.header = 'About page';
 
+        //self.infoTxt = false;
+        //self.infoBtn = function () {
+        //    self.infoTxt = self.infoTxt ? false : true;
+        //};
     }
 
 }());

@@ -12,6 +12,7 @@ gulp.task('inject', function () {
         libsDir + 'angular-ui-router/release/angular-ui-router.js',
         libsDir + 'jquery/dist/jquery.min.js',
         libsDir + 'bootstrap/dist/js/bootstrap.js',
+        libsDir + 'angular-local-storage/dist/angular-local-storage.js',
         './js/**/*.js',
         './css/**/*.css',
         libsDir + 'bootstrap/dist/css/bootstrap.css'
