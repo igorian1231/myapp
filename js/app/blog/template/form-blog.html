@@ -1,10 +1,13 @@
 <h1>{{self.header}}</h1>
 <fieldset class="form-group">
     <label for="exampleTextarea">Write whatever you want :</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    <textarea class="form-control" id="exampleTextarea" rows="6"></textarea>
 </fieldset>
 
-<button type="button" class="btn btn-primary" ng-click="form.submit()">Submit</button>
-<button type="button" class="btn btn-info" ng-click="form.cancel()">Cancel</button>
+<div>
+    <button type="button" class="btn btn-primary" ng-click="form.submit()">Submit</button>
+    <button type="button" class="btn btn-info" ng-click="form.cancel()">Cancel</button>
+</div>
 
-{{form.posts.name}} {{2+2}}
+
+{{form.posts.name}}
