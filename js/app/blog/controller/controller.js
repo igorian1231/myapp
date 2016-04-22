@@ -6,19 +6,21 @@
 
     angular
         .module('myApp')
-        .controller('BlogCtrl', ['$state', BlogCtrl]);
+        .controller('BlogCtrl', ['$state', 'localStorageService', BlogCtrl]);
 
     function BlogCtrl ($state, localStorageService) {
         var self = this;
 
         self.saveToLocalStorage = function () {
-            localStorageService.set();
+            localStorageService.set('posts', self.posts);
         };
 
-        self.posts = [{name: 'Post One', description: 'this is the description of the post'},
-            {name: 'Post Two', description: 'second descr...'},
-            {name: 'Post Three', description: 'third description'}
-        ];
+        self.setPosts = function setPosts () {
+            localStorageService.set('posts', self.posts);
+        };
+
+        self.posts = (localStorageService.get('posts') === null) ? [] : localStorageService.get('posts');
+
         //console.log(posts.name);
         //$state.go('home.main');
 
@@ -28,7 +30,9 @@
             $state.go('main.blog.add');
         };
 
-
+        self.delete = function (index) {
+            self.posts.splice(index, 1);
+            self.setPosts();
+        }
     }
-
 }());

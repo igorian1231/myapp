@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background: url("images/ignasi_pattern_s.png");
 }
 
@@ -13,4 +12,9 @@ body {
 
 .form-group .form-control {
     width: 50%;
+}
+
+.form-group label:first-child {
+    width: 50%;
+    display: block;
 }

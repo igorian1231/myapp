@@ -1,7 +1,8 @@
 <h1>{{self.header}}</h1>
 <fieldset class="form-group">
+    <label for="postName">Post name<input id="postName" class="input-group" type="text" ng-model="form.post.name"></label>
     <label for="exampleTextarea">Write whatever you want :</label>
-    <textarea class="form-control" id="exampleTextarea" rows="6"></textarea>
+    <textarea class="form-control" id="exampleTextarea" rows="6" ng-model="form.post.description"></textarea>
 </fieldset>
 
 <div>
@@ -9,5 +10,6 @@
     <button type="button" class="btn btn-info" ng-click="form.cancel()">Cancel</button>
 </div>
 
-
-{{form.posts.name}}
+<pre>
+    {{form.posts | json}}
+</pre>

@@ -5,7 +5,11 @@
 
 <div class="blogContent">
     <div ng-repeat="post in blog.posts">
-        <h2>{{post.name}}</h2>
-        <p>{{post.description}}</p>
+        <div>
+            <h2>{{post.name}}</h2>
+            <p>{{post.description}}</p>
+            <button type="button" class="btn btn-danger" ng-click="blog.delete($index)">Delete</button>
+        </div>
     </div>
 </div>
+
