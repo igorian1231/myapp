@@ -30,6 +30,13 @@
             $state.go('main.blog.add');
         };
 
+        self.isEditing = [];
+        self.edit = function edit (id, index) {
+            self.isEditing = true;
+            self.isEditing[index] = self.post[index].name;
+            $state.go('main.blog.edit', {id: id});
+        };
+
         self.delete = function (index) {
             self.posts.splice(index, 1);
             self.setPosts();

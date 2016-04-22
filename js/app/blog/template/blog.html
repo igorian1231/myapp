@@ -8,8 +8,15 @@
         <div>
             <h2>{{post.name}}</h2>
             <p>{{post.description}}</p>
+            <p>{{post.date}}</p>
             <button type="button" class="btn btn-danger" ng-click="blog.delete($index)">Delete</button>
+            <button type="button" class="btn btn-link" ng-click="blog.edit(post.id)">Edit post</button>
         </div>
     </div>
+    <div ng-if="isEditing($index)">
+        <button type="button" class="btn btn-success" ng-click="blog.save()">Save</button>
+        <button type="button" class="btn btn-info" ng-click="blog.cancel()">Cancel</button>
+    </div>
+
 </div>
 

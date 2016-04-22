@@ -6,9 +6,9 @@
 
     angular
         .module('myApp')
-        .controller('FormCtrl', ['$state', 'localStorageService', FormCtrl]);
+        .controller('FormCtrl', ['$state', '$stateParams', 'localStorageService', FormCtrl]);
 
-    function FormCtrl ($state, localStorageService) {
+    function FormCtrl ($state, $stateParams, localStorageService) {
         var self = this;
 
         self.posts = (localStorageService.get('posts') === null) ? [] : localStorageService.get('posts');
@@ -17,15 +17,20 @@
             localStorageService.set('posts', self.posts);
         };
 
+        self.id = $stateParams.id;
+
         self.post = {};
 
         self.submit = function submit () {
-            if (!self.post.name && !self.post.description) {
+            if (!self.post.name || !self.post.description) {
                 return false;
             }
+
             self.posts.push({
+                id: Math.floor(Math.random() * 100000),
                 name: self.post.name,
-                description: self.post.description
+                description: self.post.description,
+                date: new Date
             });
 
             self.setPosts();

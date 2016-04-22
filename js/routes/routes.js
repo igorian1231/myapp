@@ -32,9 +32,15 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'BlogCtrl',
             controllerAs: 'blog'
         })
-
         .state('main.blog.add', {
             url: '/add',
+            templateUrl: 'js/app/blog/template/form-blog.html',
+            controller: 'FormCtrl',
+            controllerAs: 'form'
+        })
+
+        .state('main.blog.edit', {
+            url: '/edit/:id',
             templateUrl: 'js/app/blog/template/form-blog.html',
             controller: 'FormCtrl',
             controllerAs: 'form'
