@@ -55,8 +55,6 @@
                     description: self.post.description,
                     date: new Date
                 });
-            } else if (self.isEditMode()) {
-
             }
 
             self.setPosts();
