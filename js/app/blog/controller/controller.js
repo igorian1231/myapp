@@ -31,15 +31,21 @@
         };
 
         self.isEditing = [];
-        self.edit = function edit (id, index) {
+        self.item = [];
+
+        self.edit = function edit (id) {
             self.isEditing = true;
-            self.isEditing[index] = self.post[index].name;
+            self.item[id] = self.posts[id];
             $state.go('main.blog.edit', {id: id});
+            self.setPosts();
         };
 
         self.delete = function (index) {
             self.posts.splice(index, 1);
             self.setPosts();
-        }
+        };
+
+
+
     }
 }());

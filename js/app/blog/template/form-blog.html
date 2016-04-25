@@ -5,9 +5,14 @@
     <textarea class="form-control" id="exampleTextarea" rows="6" ng-model="form.post.description"></textarea>
 </fieldset>
 
-<div>
-    <button type="button" class="btn btn-primary" ng-click="form.submit()">Submit</button>
+<div style="display: inline-block">
+    <!--<button type="button" class="btn btn-primary" ng-click="form.submit()">Submit</button>-->
     <button type="button" class="btn btn-info" ng-click="form.cancel()">Cancel</button>
+</div>
+
+<div style="display: inline-block">
+    <button type="button" class="btn btn-success" ng-click="form.save(post.id)">Save</button>
+    <!--<button type="button" class="btn btn-info" ng-click="blog.cancel()">Cancel</button>-->
 </div>
 
 <pre>
