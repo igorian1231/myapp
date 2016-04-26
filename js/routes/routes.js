@@ -38,11 +38,16 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'FormCtrl',
             controllerAs: 'form'
         })
-
         .state('main.blog.edit', {
             url: '/edit/:id',
             templateUrl: 'js/app/blog/template/form-blog.html',
             controller: 'FormCtrl',
             controllerAs: 'form'
+        })
+        .state('main.login', {
+            url: '/login',
+            templateUrl: 'js/app/login/template/login.html',
+            controller: 'LogCtrl',
+            controllerAs: 'log'
         })
 });

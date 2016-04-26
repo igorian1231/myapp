@@ -11,7 +11,6 @@
         //$state.go('home.main');
 
         self.header = 'Home page';
-        console.log('dsfs');
 
     }
 
