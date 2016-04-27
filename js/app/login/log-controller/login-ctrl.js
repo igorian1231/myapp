@@ -11,8 +11,13 @@
     function LogCtrl ($state) {
         var self = this;
 
-        self.header = 'Login';
-        console.log('show');
-        //$state.go('home.main');
+        self.header = 'Please login';
+
+        self.message = 'ready';
+
+        self.addNewUser = function addNewUser (userDetails) {
+            self.message = userDetails.mail + '( ' + userDetails.password + ' )';
+        };
+
     }
 }());
