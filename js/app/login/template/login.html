@@ -5,7 +5,7 @@
 
         <form name="myForm" novalidate class="form" ng-submit="addNewUser(newUser)">
             <input name="userEmail" type="email" placeholder="Email" required ng-model="newUser.mail">
-            <input name="userPassword" type="text" placeholder="Password" required ng-model="newUser.password">
+            <input name="userPassword" type="password" placeholder="Password" required ng-model="newUser.password">
             <button type="submit" id="login-button" ng-disabled="myForm.$invalid">Login</button>
 
             <div style="margin-top: 20px; color: #000;">
@@ -289,7 +289,7 @@
         }
         100% {
             -webkit-transform: translateY(-700px) rotate(600deg);
-            transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-900px) rotate(600deg);
         }
     }
     @keyframes square {
