@@ -1,7 +1,14 @@
 <h1>{{self.header}}</h1>
 <fieldset class="form-group">
-    <label for="postName">Post name<input id="postName" class="input-group" type="text" ng-model="form.post.name"></label>
-    <label for="exampleTextarea">Write whatever you want :</label>
+    <label for="postName">Post name
+        <input id="postName" class="input-group" type="text" ng-model="form.post.name">
+    </label>
+    <div>
+        <input style="margin: 10px 0" type="file" id="file" name="file"/>
+        <button ng-click="add()">OK</button>
+    </div>
+
+    <label for="exampleTextarea" style="display: inline-block">Write whatever you want :</label>
     <textarea class="form-control" id="exampleTextarea" rows="6" ng-model="form.post.description"></textarea>
 </fieldset>
 

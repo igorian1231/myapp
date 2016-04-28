@@ -62,17 +62,20 @@
             $state.go('main.blog', {}, {reload: true});
         };
 
-        //self.isEditing = [];
-        //self.item = [];
-
-        //self.save = function save (id) {
-        //    self.isEditing = false;
-        //    self.post.name[id] = self.item[id];
-        //    self.post.description[id] = self.item[id];
-        //};
-
         self.cancel = function cancel () {
             $state.go('main.blog');
         };
+
+        self.add = function(){
+            var f = document.getElementById('file').files[0],
+                r = new FileReader();
+            r.onloadend = function(e){
+                var data = e.target.result;
+                //send you binary data via $http or $resource or do anything else with it
+            };
+            r.readAsBinaryString(f);
+        }
+
+
     }
 }());

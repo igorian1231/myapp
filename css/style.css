@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: url("images/ignasi_pattern_s.png");
+    font-size: 18px !important;
 }
 
 .info p {
