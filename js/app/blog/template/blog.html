@@ -6,9 +6,9 @@
 <div class="blogContent">
     <div ng-repeat="post in blog.posts">
         <div>
-            <h2>{{post.name}}</h2>
+            <h2 ng-click="blog.edit(post.id)">{{post.name}} </h2>
             <p>{{post.description}}</p>
-            <p>{{post.date}}</p>
+            <p>{{post.date | date: "MM/dd/yyyy 'at' h:mma"}}</p>
             <button type="button" class="btn btn-danger" ng-click="blog.delete($index)">Delete</button>
             <button type="button" class="btn btn-link" ng-click="blog.edit(post.id)">Edit post</button>
         </div>

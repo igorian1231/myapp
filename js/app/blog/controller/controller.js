@@ -21,9 +21,6 @@
 
         self.posts = (localStorageService.get('posts') === null) ? [] : localStorageService.get('posts');
 
-        //console.log(posts.name);
-        //$state.go('home.main');
-
         self.header = 'My Blog';
 
         self.addBtn = function addBtn () {
