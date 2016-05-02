@@ -35,6 +35,12 @@
             self.item[id] = self.posts[id];
             $state.go('main.blog.edit', {id: id});
             self.setPosts();
+
+            if (self.posts[id]) {
+                return self.posts[id] === self.isEditing;
+            } else {
+                return false;
+            }
         };
 
         self.delete = function (index) {
